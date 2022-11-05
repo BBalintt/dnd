@@ -27,6 +27,18 @@
     <select name="subclass" id="subclass">
         
     </select>
+    <h1>Race</h1>
+    <select name="class" id="class" onclick="cl()">
+        <option value="Dwarf">Dwarf</option> 
+        <option value="Elf">Elf</option> 
+        <option value="Halfling">Halfling</option> 
+        <option value="Human">Human</option> 
+        <option value="Dragonborn">Dragonborn</option> 
+        <option value="Gnome">Gnome</option> 
+        <option value="Half-Elf">Half-Elf</option> 
+        <option value="Half-Orc">Half-Orc</option> 
+        <option value="Tiefling">Tiefling</option>
+    </select>
     <script>
         function cl()
         {
@@ -75,13 +87,17 @@
             {
             var array = ["Abjuration","Conjuration","Divination","Enchantment","Evocation","Illusion","Necromancy","Transmutation"];
             }
+            else if(document.getElementById("class").value=="Cleric")
+            {
+            var array = ["Knowledge", "Life", "Light", "Nature", "Tempest", "Trickery", "War"];
+            }
             for (var i = 0; i < array.length; i++) {
                 var option = document.createElement("option");
                 option.value = array[i];
                 option.text = array[i];
                 selectList.appendChild(option);
             }
-            
+
         }
     </script>
 </body>
