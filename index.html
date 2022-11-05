@@ -28,7 +28,7 @@
         
     </select>
     <h1>Race</h1>
-    <select name="class" id="class" onclick="cl()">
+    <select name="class" id="class" onclick="">
         <option value="Dwarf">Dwarf</option> 
         <option value="Elf">Elf</option> 
         <option value="Halfling">Halfling</option> 
@@ -38,6 +38,36 @@
         <option value="Half-Elf">Half-Elf</option> 
         <option value="Half-Orc">Half-Orc</option> 
         <option value="Tiefling">Tiefling</option>
+    </select>
+    <h1>Personality and Background</h1>
+    <span>Height:</span><input type="text" name="height" id="height">
+    <span>Width:</span><input type="text" name="width" id="width">
+    <span>Other things:</span><input type="text" name="other" id="other"><br>
+    <span>Aligment:</span>
+    <select name="aligment" id="aligment" onclick="">
+        <option value="LG">Lawful Good</option> 
+        <option value="NG">Neutral Good</option> 
+        <option value="CG">Caotic Good</option> 
+        <option value="LN">Lawful Neutral</option> 
+        <option value="NN">True Neutral</option> 
+        <option value="CN">Caotic Neutral</option> 
+        <option value="LE">Lawful Evil</option> 
+        <option value="NE">Neutral Evil</option> 
+        <option value="CE">Caotic Evil</option>
+    </select>
+    <span>Langauges:</span><input type="text" name="Langauges" id="Langauges"><br>
+    <span>Personality Traits:</span><input type="text" name="Personality Traits" id="Personality Traits"><br>
+    <span>Ideals:</span><input type="text" name="Ideals" id="Ideals"><br>
+    <span>Bonds:</span><input type="text" name="Bonds" id="Bonds"><br>
+    <span>Flaws:</span><input type="text" name="Flaws" id="Flaws"><br>
+    <span>Background:</span>
+    <select name="background" id="background" onclick="cl()">
+        <option value="Custom">Custom</option> 
+        <option value="Criminal">Criminal</option> 
+        <option value="Folk Hero">Folk Hero</option> 
+        <option value="Noble">Noble</option> 
+        <option value="Sage">Sage</option> 
+        <option value="Solider">Solider</option>
     </select>
     <script>
         function cl()
