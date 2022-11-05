@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hu">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +7,82 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Cím</h1>
+    <h1>Class</h1>
+    <select name="class" id="class" onclick="cl()">
+        <option value="Barbarian">Barbarian</option> 
+        <option value="Bard">Bard</option> 
+        <option value="Cleric">Cleric</option> 
+        <option value="Druid">Druid</option> 
+        <option value="Fighter">Fighter</option> 
+        <option value="Monk">Monk</option> 
+        <option value="Paladin">Paladin</option> 
+        <option value="Ranger">Ranger</option> 
+        <option value="Rogue">Rogue</option>
+        <option value="Sorcerer">Sorcerer</option> 
+        <option value="Warlock">Warlock</option> 
+        <option value="Wizard">Wizard</option> 
+        <option value="Artificer">Artificer</option>
+        <option value="Blood Hunter">Blood Hunter</option> 
+    </select>
+    <select name="subclass" id="subclass">
+        
+    </select>
+    <script>
+        function cl()
+        {
+            selectList=document.getElementById("subclass");
+            while(selectList.firstChild)
+            {
+                selectList.removeChild(selectList.firstChild)
+            }
+            if(document.getElementById("class").value=="Barbarian")
+            {
+            var array = ["Path of the Berserker","Path of the Totem Warrior"];
+            }
+            else if(document.getElementById("class").value=="Bard")
+            {
+            var array = ["College of Lore","College of Valor"];
+            }
+            else if(document.getElementById("class").value=="Fighter")
+            {
+            var array = ["Champion","Battle Master","Eldritch Knight"];
+            }
+            else if(document.getElementById("class").value=="Druid")
+            {
+            var array = ["Circle of the Land","Circle of the Moon"];
+            }
+            else if(document.getElementById("class").value=="Monk")
+            {
+            var array = ["Way of the Open Hand","Way of Shadow"];
+            }
+            else if(document.getElementById("class").value=="Paladin")
+            {
+            var array = ["Oath of Devotion","Oath of the Ancients","Oath of the Ancients","Oath of Vengeance"];
+            }
+            else if(document.getElementById("class").value=="Rouge")
+            {
+            var array = ["Thief archetype"];
+            }
+            else if(document.getElementById("class").value=="Sorcerer")
+            {
+            var array = ["Draconic Bloodline"];
+            }
+            else if(document.getElementById("class").value=="Warlock")
+            {
+            var array = ["Archfey","Fiend","Great Old One"];
+            }
+            else if(document.getElementById("class").value=="Wizard")
+            {
+            var array = ["Abjuration","Conjuration","Divination","Enchantment","Evocation","Illusion","Necromancy","Transmutation"];
+            }
+            for (var i = 0; i < array.length; i++) {
+                var option = document.createElement("option");
+                option.value = array[i];
+                option.text = array[i];
+                selectList.appendChild(option);
+            }
+            
+        }
+    </script>
 </body>
 </html>
