@@ -17,7 +17,7 @@
         <option value="Monk">Monk</option> 
         <option value="Paladin">Paladin</option> 
         <option value="Ranger">Ranger</option> 
-        <option value="Rogue">Rogue</option>
+        <option value="Rouge">Rouge</option>
         <option value="Sorcerer">Sorcerer</option> 
         <option value="Warlock">Warlock</option> 
         <option value="Wizard">Wizard</option> 
@@ -120,6 +120,10 @@
             else if(document.getElementById("class").value=="Cleric")
             {
             var array = ["Knowledge", "Life", "Light", "Nature", "Tempest", "Trickery", "War"];
+            }
+            else if(document.getElementById("class").value=="Ranger")
+            {
+            var array = ["Hunter","Beast Master"];
             }
             for (var i = 0; i < array.length; i++) {
                 var option = document.createElement("option");
